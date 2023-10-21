@@ -31,7 +31,7 @@ Application Instance Pattern
    loader = BlueprintsLoader(app)
 
    with app.app_context():
-      loader.register_blueprints()
+      loader.load_blueprints()
 
 
 Application Factories Pattern
@@ -48,7 +48,7 @@ Application Factories Pattern
       loader.init_app(app)
 
       with app.app_context():
-         loader.register_blueprints()
+         loader.load_blueprints()
 
       return app
 
