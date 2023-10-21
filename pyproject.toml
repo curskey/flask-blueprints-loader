@@ -1,0 +1,96 @@
+[project]
+name = "flask-blueprints-loader"
+version = "0.1.0"
+description = "Automatically discover and register Flask blueprints"
+keywords = [
+    "Flask",
+    "blueprint",
+    "extension",
+    "loader",
+    "import",
+    "auto-load",
+    "auto-import",
+    "web framework",
+    "Python"
+]
+authors = [{name = "curskey", email = "curskey@proton.me"}]
+readme = "README.rst"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+
+classifiers = [
+    "Framework :: Flask",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+dependencies = [
+    "flask>=3.0",
+]
+
+[project.optional-dependencies]
+develop = [
+    "pre-commit>=3.3",
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+]
+
+[project.urls]
+Home = "https://github.com/curskey/flask-blueprints-loader"
+Documentation = "https://flask-blueprints-loader.readthedocs.io/en/stable/"
+Source = "https://github.com/curskey/flask-blueprints-loader"
+Issue  = "https://github.com/curskey/flask-blueprints-loader/issues/"
+
+[tool.flit.module]
+name = "flask_blueprints_loader"
+
+[tool.flit.sdist]
+include = ["tests/", "docs/"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+src = ["src", "tests"]
+target-version = "py310"
+fix = true
+show-fixes = true
+show-source = true
+line-length = 100
+ignore = ['E501', 'S101']
+extend-select = ['C4', 'I', 'N', 'PT', 'RUF', 'S', 'SIM', 'TCH', 'TID', 'UP']
+
+[tool.mypy]
+python_version = "3.10"
+files = ["src/flask_blueprints_loader"]
+pretty = true
+allow_redefinition = true
+strict_equality = true
+warn_no_return = false
+ignore_missing_imports = true
+disable_error_code = "union-attr"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+filterwarnings = ["error"]
+addopts = [
+    "-ra",
+    "--cov",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["src"]
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"

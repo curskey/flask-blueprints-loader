@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg
+*.egg-info/
+MANIFEST
+
+# Test / coverage reports
+htmlcov/
+.pytest_cache/
+.coverage
+.coverage.*
+*,cover
+.cache
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Environments
+.env
+env/
+.env/
+venv/
+.venv/
+
+# PyCharm
+.idea/
+.fleet
+
+# VS Code
+.vscode
+
+# Vim, Emacs
+*.swp
+*~
+
+docs/build
+.mypy_cache/
+.ruff_cache/
