@@ -55,7 +55,12 @@ Application Factories Pattern
 Links
 -----
 
--   Documentation: https://flask-blueprints-loader.readthedocs.io/en/latest/
--   PyPI Releases: https://pypi.org/project/flask-blueprints-loader/
--   Source Code: https://github.com/curskey/flask-blueprints-loader/
--   Issue Tracker: https://github.com/curskey/flask-blueprints-loader/issues/
+-   `Documentation`_
+-   `PyPI Releases`_
+-   `Source Code`_
+-   `Issue Tracker`_
+
+.. _Documentation: https://flask-blueprints-loader.readthedocs.io/en/latest/
+.. _PyPI Releases: https://pypi.org/project/flask-blueprints-loader/
+.. _Source Code: https://github.com/curskey/flask-blueprints-loader/
+.. _Issue Tracker: https://github.com/curskey/flask-blueprints-loader/issues/
