@@ -1,6 +1,12 @@
 Flask-Blueprints-Loader
 =======================
 
+.. image:: https://img.shields.io/github/actions/workflow/status/curskey/flask-blueprints-loader/tests.yml?label=tests
+   :alt: GitHub Workflow Status (with event)
+
+.. image:: https://img.shields.io/codecov/c/github/curskey/flask-blueprints-loader
+   :alt: Codecov
+
 Flask-Blueprints-Loader is an extension for `Flask`_  that automatically discovers and registers `Blueprint`_ for your application.
 
 .. _Flask: https://flask.palletsprojects.com/
