@@ -52,7 +52,11 @@ Issue  = "https://github.com/curskey/flask-blueprints-loader/issues/"
 name = "flask_blueprints_loader"
 
 [tool.flit.sdist]
-include = ["tests/", "docs/"]
+include = [
+    "tests/",
+    "docs/",
+    "CHANGES.rst"
+]
 
 [tool.black]
 line-length = 100

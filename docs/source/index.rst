@@ -134,12 +134,16 @@ Flask-Blueprints-Loader has the following constraints and drawbacks:
 * Blueprints are expected to be organized in a specific way, with a :py:mod:`views.py` module containing the :py:obj:`Blueprint` instance in each blueprint package.
 * If your blueprints are not organized in this way, you may need to make changes to your code to use Flask-Blueprints-Loader.
 
-Additional Information
-----------------------
 
-.. toctree::
-   :maxdepth: 2
+API Reference
+-------------
 
-   api
-   changes
-   license
+.. autoclass:: flask_blueprints_loader.blueprints_loader.BlueprintsLoader
+   :members:
+
+.. include::  ../../CHANGES.rst
+
+License
+-------------
+
+This project in under the :doc:`/license`.
