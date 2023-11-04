@@ -83,11 +83,13 @@ ignore_missing_imports = true
 disable_error_code = "union-attr"
 
 [tool.pytest.ini_options]
+minversion = "7.0"
 pythonpath = ["src"]
 testpaths = ["tests"]
 filterwarnings = ["error"]
 addopts = [
     "-ra",
+    "-q",
     "--cov",
 ]
 

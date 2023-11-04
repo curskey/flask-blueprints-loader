@@ -67,7 +67,7 @@ class BlueprintsLoader:
         """
         try:
             name = f"{path.parent}.{path.stem}"
-            if spec := importlib.util.spec_from_file_location(name, str(path)):
+            if spec := importlib.util.spec_from_file_location(name, path.as_posix()):
                 module = importlib.util.module_from_spec(spec)
                 spec.loader.exec_module(module)
                 return module

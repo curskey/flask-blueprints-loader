@@ -1,4 +1,3 @@
-import sys
 from collections.abc import Generator
 from pathlib import Path
 from typing import Any
@@ -22,12 +21,13 @@ def flask_app(tmp_path) -> Flask:
 
 
 @pytest.fixture()
-def app(tmp_path) -> Generator[Flask, Any, None]:
+def app(tmp_path, monkeypatch) -> Generator[Flask, Any, None]:
     # SetUp
-    sys.path.insert(0, str(tmp_path))
-    yield flask_app(tmp_path)
+    monkeypatch.syspath_prepend(tmp_path.as_posix())
+    # sys.path.insert(0, str(tmp_path))
+    yield flask_app(tmp_path)  # noqa: PT022
     # TearDown
-    sys.path.remove(str(tmp_path))
+    # sys.path.remove(str(tmp_path))
 
 
 @pytest.fixture()
