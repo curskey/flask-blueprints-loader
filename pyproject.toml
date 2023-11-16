@@ -89,7 +89,6 @@ testpaths = ["tests"]
 filterwarnings = ["error"]
 addopts = [
     "-ra",
-    "-q",
     "--cov",
 ]
 
