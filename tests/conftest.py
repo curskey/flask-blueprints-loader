@@ -24,10 +24,8 @@ def flask_app(tmp_path) -> Flask:
 def app(tmp_path, monkeypatch) -> Generator[Flask, Any, None]:
     # SetUp
     monkeypatch.syspath_prepend(tmp_path.as_posix())
-    # sys.path.insert(0, str(tmp_path))
     yield flask_app(tmp_path)  # noqa: PT022
     # TearDown
-    # sys.path.remove(str(tmp_path))
 
 
 @pytest.fixture()

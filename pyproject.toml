@@ -1,6 +1,6 @@
 [project]
 name = "flask-blueprints-loader"
-version = "0.1.0"
+version = "0.1.1"
 description = "Automatically discover and register Flask blueprints"
 keywords = [
     "Flask",
@@ -14,7 +14,7 @@ keywords = [
     "Python"
 ]
 authors = [{name = "curskey", email = "curskey@proton.me"}]
-readme = "README.rst"
+readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
 
@@ -22,7 +22,7 @@ classifiers = [
     "Framework :: Flask",
     "Environment :: Web Environment",
     "Intended Audience :: Developers",
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "License :: OSI Approved :: BSD License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3.10",
@@ -37,14 +37,13 @@ dependencies = [
 
 [project.optional-dependencies]
 develop = [
-    "pre-commit>=3.3",
+    "pre-commit>=3.6",
     "pytest>=7.4",
     "pytest-cov>=4.1",
 ]
 
 [project.urls]
 Home = "https://github.com/curskey/flask-blueprints-loader"
-Documentation = "https://flask-blueprints-loader.readthedocs.io/en/stable/"
 Source = "https://github.com/curskey/flask-blueprints-loader"
 Issue  = "https://github.com/curskey/flask-blueprints-loader/issues/"
 
@@ -53,9 +52,8 @@ name = "flask_blueprints_loader"
 
 [tool.flit.sdist]
 include = [
-    "tests/",
-    "docs/",
-    "CHANGES.rst"
+    "README.md",
+    "CHANGES.md"
 ]
 
 [tool.black]
