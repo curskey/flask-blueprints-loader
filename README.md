@@ -61,26 +61,6 @@ def create_app():
 
 Flask-Blueprints-Loader expects your blueprints to be organized in a specific directory structure. By default, it looks for blueprints under the current_app.root_path directory or in the subdirectory specified by the BLUEPRINTS_LOADER_PATH_NAME configuration parameter. Each blueprint should be in its own package and contain a module named "views" (or as specified by the BLUEPRINTS_LOADER_MODULE_NAME configuration parameter) that defines the Blueprint instance and route definitions. If your blueprints are not organized in this way, you may need to make changes to your code to use Flask-Blueprints-Loader.
 
-Here is a structured Flask application with two blueprints, auth and blog:
-
-myapp/
-├── __init__.py
-├── auth/
-│   ├── __init__.py
-│   └── views.py
-├── blog/
-│   ├── __init__.py
-│   └── views.py
-├── templates/
-│   ├── auth/
-│   │   ├── login.html
-│   │   └── register.html
-│   └── blog/
-│       ├── index.html
-│       └── post.html
-├── config.py
-└── wsgi.py
-
 ## Configuration
 
 BLUEPRINTS_LOADER_PATH_NAME (str)
